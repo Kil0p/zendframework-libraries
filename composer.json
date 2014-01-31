@@ -1,0 +1,27 @@
+{
+    "name": "kil0p/zendframework-libraries",
+    "description": "Custom libraries for Zend Framework 2 applications.",
+    "type" : "library",
+    "keywords": [
+        "zf2",
+        "tool",
+        "library"
+    ],
+    "homepage": "https://github.com/Kil0p/zendframework-libraries",
+    "authors" : [
+        {
+            "name" : "Maciej Strzelczyk",
+            "email" : "m.strz3lczyk@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zend-captcha": ">=2.2.5",
+        "zendframework/zend-stdlib": ">=2.2.5"
+    },
+    "autoload": {
+        "psr-0": {
+            "Zfl\\": "library/"
+        }
+    }
+}
