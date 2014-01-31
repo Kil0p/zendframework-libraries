@@ -12,6 +12,7 @@ namespace Zfl\Captcha;
 use DirectoryIterator;
 use Zend\Captcha\Exception;
 use Zend\Stdlib\ErrorHandler;
+use Zend\Captcha\AbstractWord;
 
 /**
  * Image-based captcha element
