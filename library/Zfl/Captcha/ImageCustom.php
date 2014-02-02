@@ -53,7 +53,7 @@ class ImageCustom extends Image {
         }
         $colorRGB = $this->getColorRGB();
         $textColor = imagecolorallocate($img, 0, 0, 0);
-        $bgColor   = imagecolorallocate($img, $colorRGB['r'], $colorRGB['g'], $colorRGB['b']);
+        $bgColor   = imagecolorallocate($img, 255, 255, 255);
         imagefilledrectangle($img, 0, 0, $w-1, $h-1, $bgColor);
         $textbox = imageftbbox($fsize, 0, $font, $word);
         $x = ($w - ($textbox[2] - $textbox[0])) / 2;
@@ -120,7 +120,12 @@ class ImageCustom extends Image {
                     + $colorXY * $fracX  * $fracY;
                 }
 
-                imagesetpixel($img2, $x, $y, imagecolorallocate($img2, $newcolor, $newcolor, $newcolor));
+                // custom problem solver with white pixels after antialiasing
+                if($newcolor > 200){
+                    imagesetpixel($img2, $x, $y, imagecolorallocate($img2, $colorRGB['r'], $colorRGB['g'], $colorRGB['b']));
+                }else{
+                    imagesetpixel($img2, $x, $y, imagecolorallocate($img2, $newcolor, $newcolor, $newcolor));
+                }
             }
         }
 
