@@ -13,7 +13,7 @@ use Zend\Form\ElementInterface;
 use Zend\Form\Element\Select as SelectElement;
 use Zend\Form\Exception;
 use Zend\Stdlib\ArrayUtils;
-use Zend\Form\View\Helper\AbstracHelper;
+use Zend\Form\View\Helper\AbstractHelper;
 
 class FormSelect extends AbstractHelper
 {
